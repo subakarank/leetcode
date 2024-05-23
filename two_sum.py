@@ -30,12 +30,12 @@ def brute_force_two_sum(lst: List, target: int):
     return -1
 
 def two_sum(lst: List, target: int):
-    list_to_dict = {}
+    num_to_index = {}
     for key, value in enumerate(lst):
         complement = target - value
-        if complement in list_to_dict:
-            return [list_to_dict[complement], key]
-        list_to_dict[value] = key
+        if complement in num_to_index:
+            return [num_to_index[complement], key]
+        num_to_index[value] = key
     return -1
 
 print("""Brute-force solution""")
@@ -46,4 +46,3 @@ print("""Optimised solution solution""")
 print(f"list[2,5,7,4] and target 11: {two_sum([2,5,7,4], 11 )}")
 print(f"list[2,2,7,4] and target 4: {brute_force_two_sum([2,2,7,4], 4 )}")
 print(f"list[2,2,9,4] and target 12: {brute_force_two_sum([2,2,9,4], 12 )}")
-

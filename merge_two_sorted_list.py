@@ -29,7 +29,7 @@ def merge_list(nums1, nums2):
     return result
 
 nums1 = [23, 33, 35, 41, 44, 47, 56, 91, 105]
-nums2 = [32, 49, 50, 51, 61, 99]
+nums2 = [20, 32, 49, 50, 51, 61, 99, 100, 110, 115, 120]
 print("Nums1: ", nums1)
 print("Nums2: ", nums2)
 print("Merged list: ", merge_list(nums1, nums2))
@@ -46,12 +46,12 @@ def merge_within_list(nums1: list, nums2: list ):
         else: 
             p1 += 1
     
-    while p2 < len(nums2):
+    if p2 < len(nums2):
         nums1 + nums2[p2:]
     return nums1
 
 nums1 = [23, 33, 35, 41, 44, 47, 56, 91, 105]
-nums2 = [32, 49, 50, 51, 61, 99]
+nums2 = [20, 32, 49, 50, 51, 61, 99, 100, 110, 115, 120]
 print("Nums1: ", nums1)
 print("Nums2: ", nums2)
 print("Merged list: ", merge_within_list(nums1, nums2))

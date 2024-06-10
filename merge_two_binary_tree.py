@@ -31,7 +31,7 @@ def merge_tree(root1, root2):
                 node1.left = node2.left
 
             if node1.right and node2.right:
-                stack.append((node1.right, node2.righ))
+                stack.append((node1.right, node2.right))
             elif node2.right:
                 node1.right = node2.right
         elif node2:

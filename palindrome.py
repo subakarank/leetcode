@@ -32,8 +32,6 @@ def palindrome_sub_optimal_1(s: str):
             skip = True 
         if skip:
             continue 
-        print("Left value", s[left])
-        print("Right value", s[right])
 
         if (s[left].lower() != s[right].lower()):
             return False

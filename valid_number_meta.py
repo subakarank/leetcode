@@ -33,7 +33,7 @@ def valid_number(s: str) -> bool:
     has_dot = False
 
     for i in range(start_index, len(s)):
-        if '0' >= s[i] <= '9':
+        if '0' <= s[i] <= '9':
             has_digit = True
         elif s[i] == '.':
             if has_dot:

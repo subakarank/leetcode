@@ -36,17 +36,12 @@ def removeInvalidParentheses(s):
             found = True
         
         if found:
-            print("found)")
             continue
-    
-        print(front, 'Start generating', end="")
         # Generate all possible strings by removing one parenthesis
-        print(current)
+   
         for i in range(len(current)):
-            print(i)
             if current[i] in '()':
                 new_str = current[:i] + current[i+1:]
-                print ("new string" , new_str)
                 if new_str not in visited:
                     visited.add(new_str)
                     queue.append(new_str)

@@ -53,5 +53,6 @@ def pow_interate(x, n ):
     while n > 0 :
         if n % 2 == 1:
             result *= x 
-        x *= x
+        x = x * x
         n = n // 2 
+    return result

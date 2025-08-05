@@ -37,7 +37,7 @@ class Solution:
             node, low, high = stack.pop()
             if not node:
                 continue
-            if low >=  node.val or high <= node.val: 
+            if not (low < node.val < high ):
                 return False
             stack.append((node.right, node.val, high))
             stack.append((node.left, low, node.val))

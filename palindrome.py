@@ -5,8 +5,10 @@ Given a string s, return true if it is a palindrome, or false otherwise.
 '''
 
 def palindrome(s:str) -> bool:
+    s.re
     new_string = ''.join([char.lower() for char in s if char.isalnum() ])
     return new_string == new_string[::-1]
+
 
 def palindrome_sub_optimal(s: str):
     new_string = ''.join([char.lower() for char in s if char.isalnum() ])
@@ -24,10 +26,10 @@ def palindrome_sub_optimal_1(s: str):
     right = len(s) -1
     while left < right:
         skip = False
-        if not (65 <= ord(s[left]) <= 90 or 97 <= ord(s[left]) <= 122) :
+        if ignore_char(s[left]) :
             left += 1
             skip = True
-        if not (65 <= ord(s[right]) <= 90 or 97 <= ord(s[right]) <= 122) :
+        if ignore_char(s[right]) :
             right -= 1
             skip = True 
         if skip:
@@ -38,6 +40,12 @@ def palindrome_sub_optimal_1(s: str):
         left += 1
         right -= 1
     return True
+
+def ignore_char(value: str)->bool: 
+    if not (65 <= ord(value) <= 90 or 97 <= ord(value) <= 122) :
+        return True
+    else: 
+        return False 
 
 print(palindrome('madam'))
 print(palindrome_sub_optimal('ma   dam'))
